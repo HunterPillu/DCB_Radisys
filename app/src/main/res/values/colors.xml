@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2a9df4</color>
+    <color name="colorPrimaryDark">#2a9df4</color>
+    <color name="colorAccent">#2a9df4</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="lightgrey">#898989</color>
+    <color name="app_bg">#e9f5ff</color>
+
+    <!-- Dark Text Color for Light Background -->
+    <color name="textDarkPrimary">#DE000000</color> <!--DE for %87 opacity-->
+    <color name="textDarkSecondary">#8A000000</color> <!--8A for %54 opacity-->
+    <color name="textDarkDisabled">#61000000</color> <!--61 for %38 opacity-->
+
+    <!-- White Text Color for Dark Background -->
+    <color name="textLightPrimary">#FFFFFF</color> <!--%100 opacity-->
+    <color name="textLightSecondary">#B2FFFFFF</color> <!--B2 for %70 opacity-->
+    <color name="textLightDisabled">#80FFFFFF</color> <!--80 for %50 opacity-->
+
+
+    <color name="header_bg">#e9f5ff</color>
+    <!--<color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303f9f</color>
+    <color name="colorAccent">#01579b</color>-->
+    <color name="charcoal">#111111</color>
+    <color name="white_60">#eeFFFFFF</color>
+    <color name="white_50">#99FFFFFF</color>
+    <color name="divider_light">#dedede</color>
+    <color name="divider_dark">#898989</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+    <!--    VEHICLE STATUS COLORS-->
+    <color name="vehicle_stopped">#F44336</color>
+    <color name="vehicle_offline_unknown">#6D6D6D</color>
+    <color name="vehicle_idle">#FF9800</color>
+    <color name="vehicle_moving">#4CAF50</color>
+    <color name="list_location_blue">#2a9df4</color>
+    <color name="battery_yellow">#FFEB3B</color>
+
+    <color name="textLightDisabledDEPRECATED">#4CFFFFFF</color>
+    <color name="chip_bg">#f8f8f8</color> <!--4C for %30 opacity-->
+    <color name="chip_border">#dedede</color>
+    <color name="icon_tint_primary">@color/colorPrimary</color>
+    <color name="toolbar_title">#ffffff</color> <!--4C for %30 opacity-->
+    <color name="disabled">#989898</color> <!--4C for %30 opacity-->
+
+
+</resources>
