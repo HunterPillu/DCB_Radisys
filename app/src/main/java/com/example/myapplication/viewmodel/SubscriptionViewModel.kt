@@ -27,6 +27,7 @@ class SubscriptionViewModel : CommonViewModel() {
             statusLiveData.postValue(Resource.loading(1))
             val result = RetrofitBuilder.getApiService().subscriptionDetails()
             mSubscriptions = handleApiErrorsIfAny(result)
+            delay(1500)
             if (null != mSubscriptions) {
                 statusLiveData.postValue(Resource.success(1))
             } else {

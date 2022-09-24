@@ -8,9 +8,7 @@
     app:behavior_hideable="true"
     app:cardCornerRadius="@dimen/full"
     app:cardElevation="@dimen/full_xl"
-    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
-    app:strokeColor="@color/colorPrimary"
-    app:strokeWidth="0.5dp">
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/llControlsPurchase"
@@ -96,9 +94,8 @@
 
                 android:padding="@dimen/full"
                 android:text="@string/title_service_opted"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/text_body_1"
-                android:textStyle="bold" />
+                android:textColor="@color/textDarkPrimary"
+                android:textSize="@dimen/text_body_1" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/tvServiceSelected"
@@ -136,6 +133,7 @@
                 android:textSize="@dimen/text_body_1" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llPaymentOption"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_bg_outlined">

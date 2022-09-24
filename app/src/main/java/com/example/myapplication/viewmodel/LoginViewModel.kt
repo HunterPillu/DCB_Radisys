@@ -7,6 +7,7 @@ import com.example.myapplication.common_util.Resource
 import com.example.myapplication.model.DCBAuth
 import com.example.myapplication.model.OtpResp
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.json.JSONException
 import org.json.JSONObject
@@ -25,6 +26,7 @@ class LoginViewModel : CommonViewModel() {
             val request: DCBAuth = DCBAuth(email = email, phoneNumber = phone)
             val result = RetrofitBuilder.getApiService().authenticate(request)
             responseDCB = handleApiErrorsIfAny(result)
+            delay(1500)
             if (null != responseDCB) {
                 responseDCB?.email = email
                 responseDCB?.phoneNumber = phone
@@ -49,6 +51,7 @@ class LoginViewModel : CommonViewModel() {
             )
             val result = RetrofitBuilder.getApiService().association(request)
             responseOTP = handleApiErrorsIfAny(result)
+            delay(1500)
             if (null != responseOTP) {
                 statusLiveData.postValue(Resource.success(2))
             }

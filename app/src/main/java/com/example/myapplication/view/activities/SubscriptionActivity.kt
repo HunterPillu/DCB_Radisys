@@ -107,7 +107,7 @@ class SubscriptionActivity : DcbBaseActivity() {
             when (it.status) {
                 Status.LOADING -> {
                     if (it.data == 1) {
-                        pbProgress.visibility = View.VISIBLE
+                        showProgress()
                     } else if (it.data == 2) {
                         tvPurchase.visibility = View.INVISIBLE
                         pbPurchase.visibility = View.VISIBLE
@@ -123,14 +123,14 @@ class SubscriptionActivity : DcbBaseActivity() {
                         pbPurchase.visibility = View.GONE
                         showPurchaseResult(mViewModel.responsePurchase!!)
                     } else if (it.data == 1 && mViewModel.mSubscriptions?.isEmpty() == false) {
-                        pbProgress.visibility = View.GONE
+                        hideProgress()
                         showHideList(true)
                         mAdapter.addList(mViewModel.mSubscriptions!!)
                     }
                 }
                 Status.ERROR -> {
                     //progress.dismiss()
-                    pbProgress.visibility = View.GONE
+                    hideProgress()
                     tvPurchase.visibility = View.VISIBLE
                     pbPurchase.visibility = View.GONE
                     if (it.data == 1) {
@@ -158,7 +158,7 @@ class SubscriptionActivity : DcbBaseActivity() {
     private fun observeApiError() {
         mViewModel.apiErrorLiveData.observe(this) {
             //progress.dismiss()
-            pbProgress.visibility = View.GONE
+            hideProgress()
             tvPurchase.visibility = View.VISIBLE
             pbPurchase.visibility = View.GONE
             showErrorDialog(it.code, it.message)
@@ -209,7 +209,7 @@ class SubscriptionActivity : DcbBaseActivity() {
         val animationJson: String
         if (result.success == true) {
             message = getString(R.string.transaction_completed)
-            animationJson = "forget_password_animation.json"
+            animationJson = "payment_successfull.json"
         } else {
             message = getString(R.string.transaction_failed)
             animationJson = "forget_password_animation.json"
@@ -282,7 +282,7 @@ class SubscriptionActivity : DcbBaseActivity() {
             updateBottomPurchase(mAdapter.getSelectedItem())
         }
 
-        tvPaymentOption.setOnClickListener {
+        llPaymentOption.setOnClickListener {
             showPopupMenu()
         }
 

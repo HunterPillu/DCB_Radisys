@@ -12,9 +12,9 @@
         android:id="@+id/cvRegistration"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_above="@+id/cvDetails"
         android:layout_marginHorizontal="@dimen/full_xl"
-        android:layout_marginBottom="@dimen/full_xl"
+        android:layout_marginVertical="@dimen/full_xl"
         app:cardCornerRadius="@dimen/full"
         app:cardElevation="@dimen/quarter">
 
@@ -40,11 +40,11 @@
         android:id="@+id/cvDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cvRegistration"
+        android:layout_centerInParent="true"
+
         android:layout_marginHorizontal="@dimen/full_xl"
         app:cardCornerRadius="@dimen/full"
         app:cardElevation="@dimen/quarter">
-
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -63,5 +63,32 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
     </com.google.android.material.card.MaterialCardView>
 
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvSubscriptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvDetails"
+        android:layout_marginHorizontal="@dimen/full_xl"
+        android:layout_marginVertical="@dimen/full_xl"
+        app:cardCornerRadius="@dimen/full"
+
+        app:cardElevation="@dimen/quarter">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/full"
+                android:paddingVertical="@dimen/full"
+                android:text="@string/title_subscription_detail"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_sub_header" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

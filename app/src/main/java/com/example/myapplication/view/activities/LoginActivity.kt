@@ -48,7 +48,7 @@ class LoginActivity : DcbBaseActivity() {
                     if (it.data == 2 && null != mViewModel.responseOTP) {
                         val result = mViewModel.responseOTP!!
 
-                        PrefUtils.putBoolean(this, PrefUtils.KEY_LOGGED_IN, false)
+                        PrefUtils.putBoolean(this, PrefUtils.KEY_LOGGED_IN, true)
                         PrefUtils.putString(this, PrefUtils.KEY_PHONE, etPhone.text.toString())
                         PrefUtils.putString(this, PrefUtils.KEY_EMAIL, etEmail.text.toString())
 
@@ -145,13 +145,16 @@ class LoginActivity : DcbBaseActivity() {
         val mDialog = BottomSheetMaterialDialog.Builder(this)
             .setTitle(getString(R.string.title_oops), TextAlignment.START)
             .setMessage(message, TextAlignment.START)
-            .setCancelable(true)
+            .setCancelable(false)
             .setAnimation(animationJson)
             .setPositiveButton(
                 getString(R.string.text_ok)
             ) { dialogInterface, which ->
                 // Delete Operation
                 dialogInterface.dismiss()
+                if (type == 2) {
+                    finish()
+                }
             }
             /* .setNegativeButton(
                  "Cancel", R.drawable.ic_close
